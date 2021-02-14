@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import searchYoutube from 'youtube-api-v3-search';
+import "./Detail.css";
 class Detail extends Component{
     componentDidMount(){
         const {location,history} = this.props;
@@ -8,9 +9,24 @@ class Detail extends Component{
         }
     }
     render(){
-        const {location} = this.props;
-        if (location.state){
-            return <span>{location.state.title}</span>
+        const {state} = this.props.location;
+        if (state){
+            return (
+                <div className="detail">
+                    <img src={state.poster} alt={state.title} title={state.title}/>
+                    <div className="detail-text">
+                        <div className="detail-text__title">
+                            <p className="text-title">{state.title}</p>
+                            <p className="text-year">{state.year}</p>
+                        </div>
+                        <ul className="text-ul">
+                            {state.genres.map(genre => 
+                                <li>{genre}</li>)}
+                        </ul>
+                        <div>{state.summary}</div>
+                    </div>
+                </div>
+            )
         }else{
             return null;
         }

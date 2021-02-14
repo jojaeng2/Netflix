@@ -14,7 +14,7 @@ function Movie({year,title,poster,summary,genres}) {
                 poster,
                 genres
             }
-        }}>
+        }} className="link">
         <div className="movie">
             <img src={poster} alt={title} title={title}/>
             <div className="movie-data">

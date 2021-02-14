@@ -7,8 +7,10 @@ body,
     color:#e84118;
     height: 100%;
 }
+
 html,
-.container{
+.container,
+.wrapper{
     height: 100%;
 }
 .loader{

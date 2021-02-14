@@ -1,0 +1,23 @@
+.detail{
+    margin: 30px 30px;
+    display: flex;
+}
+.detail-text{
+    margin-left: 20px;
+    margin-right: 100px;
+}
+.detail-text__title{
+    display: flex;
+    align-items: center;
+}
+.text-title{
+    font-size: 2rem;
+    padding-right: 20px;
+}
+.text-ul{
+    list-style: none;
+    display: flex;
+}
+.text-ul li{
+    padding: 10px 10px;
+}
